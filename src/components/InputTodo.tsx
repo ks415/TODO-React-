@@ -1,3 +1,10 @@
+type Props = {
+  todoText: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: () => void;
+  disabled: boolean;
+}
+
 const style = {
     backgroundColor: "rgba(218, 155, 100, 0.565)",
     width: "400px",
@@ -7,7 +14,7 @@ const style = {
     borderRadius: "8px"
 };
 
-export const InputTodo = (props) => {
+export const InputTodo = (props: Props) => {
     const {todoText, onChange, onClick, disabled} = props;
     return(
         <div style={style}>

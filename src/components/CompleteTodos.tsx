@@ -1,4 +1,9 @@
-export const CompleteTodos = (props) => {
+type Props = {
+  todos: string[];
+  onClickBack: (index: number) => void;
+}
+
+export const CompleteTodos = (props: Props) => {
     const {todos, onClickBack} = props;
     return (
         <div className="complete-area">
